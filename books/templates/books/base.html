@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+{% block head %}
+<head>
+    <title> Book manager </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script
+        src="http://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous">
+    </script>
+</head>
+{% endblock %}
+
+<body>
+
+{% block navbar %}
+    {% include 'books/_navbar.html' %}
+{% endblock %}
+
+
+{% block content %}
+{% endblock %}
+
+
+</body>
+
+{% block js %}
+
+{% endblock %}
+
+</html>
+
+

@@ -1,0 +1,16 @@
+{% extends 'books/base.html' %}
+
+{% block content %}
+    <div id="add_form_div">
+        <h3>
+            Add book
+        </h3>
+        <form id="add_book_form" method="post" action="#">
+            {% csrf_token %}
+            {{ add_form.as_p }}
+            <button type="submit" id="add_book_button">
+                Add
+            </button>
+        </form>
+    </div>
+{% endblock %}

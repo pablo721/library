@@ -1,0 +1,99 @@
+{% extends 'books/base.html' %}
+
+{% block content %}
+
+    <div id="search_books_div">
+        <h2>
+            Search books
+        </h2>
+        <label for="search_by_title">
+            By title
+        </label>
+        <input type="text" id="search_by_title">
+
+        <label for="search_by_author">
+            By author
+        </label>
+        <input type="text" id="search_by_author">
+
+        <label for="search_by_lang">
+            By language
+        </label>
+        <input type="text" id="search_by_lang">
+
+        <label for="from_date">
+            Published from
+        </label>
+        <input type="date" id="from_date">
+
+        <label for="to_date">
+            Published to
+        </label>
+        <input type="date" id="to_date">
+    </div>
+
+    <div id="books_table_div">
+
+        <h2 id="all_books_title">
+            All books
+        </h2>
+
+        <table id="books_table">
+            <thead>
+                <tr>
+                    <th>
+                        Title
+                    </th>
+                    <th>
+                        Author
+                    </th>
+                    <th>
+                        Publication date
+                    </th>
+                    <th>
+                        ISBN
+                    </th>
+                    <th>
+                        Number of pages
+                    </th>
+                    <th>
+                        Cover link
+                    </th>
+                    <th>
+                        Language
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for book in books %}
+                    <tr>
+                        <td>
+                            {{ book.title }}
+                        </td>
+                        <td>
+                            {{ book.author }}
+                        </td>
+                        <td>
+                            {{ book.pub_date }}
+                        </td>
+                        <td>
+                            {{ book.isbn }}
+                        </td>
+                        <td>
+                            {{ book.n_pages }}
+                        </td>
+                        <td>
+                            {{ book.cover_link }}
+                        </td>
+                        <td>
+                            {{ book.language }}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}
+
+

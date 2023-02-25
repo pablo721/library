@@ -1,0 +1,5 @@
+Django==3.2.9
+django_filter==21.1
+django_on_heroku==1.1.2
+djangorestframework==3.12.4
+requests==2.26.0
